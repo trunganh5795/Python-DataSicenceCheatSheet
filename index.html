@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container text-center">
+        <h1>Python Cheat Sheet</h1>
+        <h2>Menu: <a class="btn btn-success" href="/pandas.html">Pandas</a></h2>
+        <section class="text-start">
+            <div class="border-bottom pb-2">
+                <h3>1/ Chiều dài list</h3>
+                <p>ds = []</p>
+                <p> print( len(ds) )</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">chiều dài</span>
+                <span class="badge bg-warning  text-dark">len</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>2/ Chiều dài list</h3>
+                <p>for i in range(4)</p>
+                <p>Giải thích: i chạy từ 0 -> 3</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">for</span>
+                <span class="badge bg-warning  text-dark">range</span>
+                <span class="badge bg-warning  text-dark">for i in</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>3/ Indexing, truy cập phần tử theo index</h3>
+                <p>ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>print(ds_học_viên[0]) => Nam <br>
+                    print(ds_học_viên[1]) => Lan<br>
+                    print(ds_học_viên[-1]) => Việt<br>
+                    print(ds_học_viên[-2]) => Mai</p>
+                <p>**** Giải thích:index đánh số từ 0 từ trái qua phải, đánh -1 từ phải qua trái</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">index</span>
+                <span class="badge bg-warning  text-dark">indexing</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>4/ Splicing, cắt list, tách lish</h3>
+                <p>
+                    ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]
+                    <br>
+                    ds_nhóm1 = ds_học_viên[:2]
+                    <br>
+                    print( ds_nhóm1) => ['Nam', 'Lan']
+                </p>
+                <p>**** Giải thích: lấy phần tử từ đầu đến phần tử index 1. 2 là stop positsion.</p>
+                <p>ds_nhóm2 = ds_học_viên[2:4] <br>
+                    print(ds_nhóm2) => ["Mai", "Việt"] </p>
+                <p>**** Giải thích : lấy từ vị trí index 2 đến 3</p>
+                <p>ds_nhóm3 = ds_học_viên[1:] <br>
+                    print(ds_nhóm3) => ["Lan", "Mai", "Việt"]] </p>
+                <p>**** Giải thích : lấy từ vị trí index 1 đến hết list</p>
+                <p>ds_nhóm4 = ds_học_viên[-4:0] <br>
+                    print(ds_nhóm3) => ["Nam", "Lan", "Mai", "Việt"] </p>
+                <p>**** Giải thích : lấy từ vị trí index -4 đến hết list. ( Với list này -4 tương đương index = 0 )</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">cắt list</span>
+                <span class="badge bg-warning  text-dark">cắt danh sách</span>
+                <span class="badge bg-warning  text-dark">splice</span>
+                <span class="badge bg-warning  text-dark">splicing</span>
+                <span class="badge bg-warning  text-dark">slice</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>5/Reversing, đảo list</h3>
+                <p>Cách 1: ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>ds_học_viên.reverse()<br>
+                    print( ds_học_viên ) => ['Việt', 'Mai', 'Lan', 'Nam']<br>
+                <p>**** Giải thích: Thực hiện đảo trên danh sách hiện có</p>
+                <p>Cách 2: ds_hoc_vien_đảo = reversed( ds_học_viên )<br>
+                    print( ds_hoc_vien_đảo ) => ['Việt', 'Mai', 'Lan', 'Nam']<br>
+                <p>**** Giải thích: Trả về danh sách đảo, danh sách gốc không bị ảnh hưởng</p>
+                <p>Cách 3: ds_học_viên_đảo = ds_học_viên[-1::-1]<br>
+                    print(ds_học_viên_đảo) => ['Việt', 'Mai', 'Lan', 'Nam']<br>
+                <p>**** Giải thích: ###</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">reverse</span>
+                <span class="badge bg-warning  text-dark">reversing</span>
+                <span class="badge bg-warning  text-dark">đảo</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>6/ Thêm phần tử vào list</h3>
+                <p>ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>ds_học_viên = ds_học_viên + ["Peter"]</p>
+                <p>ds_học_viên.insert(2, "Long") => thêm vào vị trí index = 2</p>
+                <p>ds_học_viên.append("Alex") => Thêm vào cuố list</p>
+                <p>ds_học_viên.extend(["Yeong-ho", "Mai"]) => thêm nhiều phần từ vào cuối list</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">add</span>
+                <span class="badge bg-warning  text-dark">thêm</span>
+                <span class="badge bg-warning  text-dark">thêm vào list</span>
+                <span class="badge bg-warning  text-dark">insert</span>
+                <span class="badge bg-warning  text-dark">append</span>
+                <span class="badge bg-warning  text-dark">extend</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>7/ Xóa phần tử khỏi list</h3>
+                <p>ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>ds_học_viên.remove("Mai") => xóa phần tử có giá trị là "Mai" </p>
+                <p>ds_học_viên.pop(3) => xóa phần tử tại index = 3</p>
+                <p>del(ds_học_viên[4]) => xóa phần tử tại index = 4</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">remove</span>
+                <span class="badge bg-warning  text-dark">xóa</span>
+                <span class="badge bg-warning  text-dark">xóa phần tử</span>
+                <span class="badge bg-warning  text-dark">del</span>
+                <span class="badge bg-warning  text-dark">pop</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>8/ Sửa giá trị phần tử trong list</h3>
+                <p>ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>ds_học_viên[4] = "Trung Anh"</p>
+                <p>Giải thích: sửa phần tử index= 4 thành Trung Anh</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">Edit</span>
+                <span class="badge bg-warning  text-dark">sửa</span>
+                <span class="badge bg-warning  text-dark">sửa phần tử</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>9/ Tìm Index của 1 phần tử</h3>
+                <p>ds_học_viên = ["Nam", "Lan", "Mai", "Việt"]</p>
+                <p>index = ds_học_viên.index("Nam")</p>
+                <p>print( index ) => 0</p>
+                <p>Giải thích: Tìm ví trí của phần tử "Nam" => kết quả là 0</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">FindIndex</span>
+                <span class="badge bg-warning  text-dark">tìm index</span>
+                <span class="badge bg-warning  text-dark">index</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>10/ Min , max</h3>
+                <p>ds_chi_tieu = [5, 6, 3, 7, 3, 8]</p>
+                <p>chi_tieu_max = max( ds_chi_tieu )</p>
+                <p>chi_tieu_min = min( ds_chi_tieu ) => 0</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">min</span>
+                <span class="badge bg-warning  text-dark">max</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>11/ Tìm phần tử trong list</h3>
+                <p>ds_chi_tieu = [5, 6, 3, 7, 3, 8]</p>
+                <p>Cách 1: index = ds_chi_tieu.index(7) <br> print( index )</p>
+                <p>Cách 2: </p>
+                <p>if 4 in ds_chi_tieu: <br> print(ds_chi_tieu.index(4)) <br> else: <br> print("Không có số 4 trong
+                    ds_chi_tieu")</p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">find</span>
+                <span class="badge bg-warning  text-dark">tìm</span>
+                <span class="badge bg-warning  text-dark">duyệt</span>
+                <span class="badge bg-warning  text-dark">duyệt list</span>
+                <span class="badge bg-warning  text-dark">duyệt danh sách</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>12/ Sắp xếp danh sách , sort</h3>
+                <p>ds_chi_tieu = [5, 6, 3, 7, 3, 8]</p>
+                <p> <b>Cách 1: trả về danh sách mới</b> <br> ds_chi_tieu_sort = sorted(ds_chi_tieu)</p>
+                <p>ds_chi_tieu_reverse = sorted(ds_chi_tieu, reverse=True) => sắp xếp giảm dần</p>
+                <p> <b>Cách 2: sort trực tiếp trên danh sách gốc</b> </p>
+                <p>ds_chi_tieu.sort() </p>
+                <p>ds_chi_tieu.sort(reverse=True) => sắp xếp giảm dần</p>
+                <p> <b>Sort Zip:</b>  </p>
+                <p>L1 = [9,3,5,7]
+                    <br>
+                    L2 = [4,2,8,6]
+                    <br>
+                    sorted(zip(L1,L2), key=lambda x: x[0]) => sort dựa theo phần tử 0 của zip, sửa thành z[1] để sort theo phần tử 1
+                    <br>
+                    [(3, 2), (5, 8), (7, 6), (9, 4)]
+                </p>
+                <div class="text-danger">
+                    <p>Có thể sắp xếp mảng hay số cũng được</p>
+                </div>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">sort</span>
+                <span class="badge bg-warning  text-dark">sorted</span>
+                <span class="badge bg-warning  text-dark">sắp xếp</span>
+                <span class="badge bg-warning  text-dark">giảm dần</span>
+                <span class="badge bg-warning  text-dark">tăng dần</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>13/ Sắp xếp danh sách ngẫu nhiên , random sort</h3>
+                <p>ds_chi_tieu = [5, 6, 3, 7, 3, 8]</p>
+                <p>import random</p>
+                <p>random.shuffle(ds_chi_tieu)</p>
+                <p>Hoặc random.shuffle(ds_chi_tieu, lambda : 0.05)</p>
+                <p>** Giải thích : khi không truyền function tại tham số thứ 2 vào, mặc định nó sẽ là random, nếu gán
+                    function trả về giá trị cố định thị chạy lại hàm random.shuffle vẫn ra giá trị giống nhau</p>
+                <div class="text-danger">
+                    <p>Có thể sắp xếp mảng hay số cũng được</p>
+                </div>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">sort</span>
+                <span class="badge bg-warning  text-dark">sorted</span>
+                <span class="badge bg-warning  text-dark">sắp xếp</span>
+                <span class="badge bg-warning  text-dark">ngẫu nhiên</span>
+                <span class="badge bg-warning  text-dark">random</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>14/ Tách ngẫu nhiên phần tử trong danh sách , random.shuffle</h3>
+                <p>import random</p>
+                <p>ds_học_viên = ['Nam', 'Lan', 'Long', 'Việt', 'Peter', 'Alex', 'Yeong-ho', 'Mai']</p>
+                <p>ds_nhom1 = random.sample(ds_học_viên, k=3)</p>
+                <p>***Giải thích: lấy ngẫu nhiên k phần tử trong danh sách gốc ( ko làm ảnh hưởng tới danh sách gốc )
+                </p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">random</span>
+                <span class="badge bg-warning  text-dark">shuffle</span>
+                <span class="badge bg-warning  text-dark">slice</span>
+                <span class="badge bg-warning  text-dark">splicing</span>
+                <span class="badge bg-warning  text-dark">splice</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>15/ Enumerate</h3>
+                <p>import random</p>
+                <p>ds_học_viên = ['Nam', 'Lan', 'Long', 'Việt', 'Peter', 'Alex', 'Yeong-ho', 'Mai']</p>
+                <p>a = enumerate(ds_học_viên)</p>
+                <p>for item in a: print(item)</p>
+                <p> <b>Output: </b> <br>
+                    (0, 'Nam') <br>
+                    (1, 'Lan') <br>
+                    (2, 'Long') <br>
+                    (3, 'Việt') <br>
+                    (4, 'Peter') <br>
+                    (5, 'Alex') <br>
+                    (6, 'Yeong-ho') <br>
+                    (7, 'Mai') <br>
+                </p>
+                <p>***Giải thích: đánh index cho các item trong list
+                </p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">Enumerate</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>16/ Đọc ghi file .txt</h3>
+                <img src="./img/1.png" style="width:100%;" alt="">
+                <p>***Giải thích: có một vài mode cơ bản như sau <br>
+                    r for reading – The file pointer is placed at the beginning of the file. This is the default mode.
+                    <br>
+                    r+ Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+                    <br>
+                    w Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist,
+                    creates a new file for writing.
+                    <br>
+                    w+ Opens a file for both writing and reading. Overwrites the existing file if the file exists. If
+                    the file does not exist, it creates a new file for reading and writing.
+                    <br>
+                    <a href="https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/">see
+                        more</a>
+                </p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">txt</span>
+                <span class="badge bg-warning  text-dark">đọc</span>
+                <span class="badge bg-warning  text-dark">ghi</span>
+                <span class="badge bg-warning  text-dark">readlines</span>
+            </div>
+            <div class="border-bottom pb-2">
+                <h3>16/ Đọc ghi file .csv</h3>
+                <p>Ví dụ 1</p>
+                <img src="./img/2.png" style="width:100%;" alt="">
+                <p>Ví dụ 2</p>
+                <img src="./img/3.png" alt="">
+                <p>***Giải thích: có một vài mode cơ bản như sau <br>
+                    r for reading – The file pointer is placed at the beginning of the file. This is the default mode.
+                    <br>
+                    r+ Opens a file for both reading and writing. The file pointer will be at the beginning of the file.
+                    <br>
+                    w Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist,
+                    creates a new file for writing.
+                    <br>
+                    w+ Opens a file for both writing and reading. Overwrites the existing file if the file exists. If
+                    the file does not exist, it creates a new file for reading and writing.
+                    <br>
+                    <a href="https://tutorial.eyehunts.com/python/python-file-modes-open-write-append-r-r-w-w-x-etc/">see
+                        more</a>
+                </p>
+                <h3 class="d-inline-block">Tags: </h3>
+                <span class="badge bg-warning  text-dark">csv</span>
+                <span class="badge bg-warning  text-dark">đọc</span>
+                <span class="badge bg-warning  text-dark">ghi</span>
+                <span class="badge bg-warning  text-dark">reader</span>
+                <span class="badge bg-warning  text-dark">next</span>
+                <span class="badge bg-warning  text-dark">header</span>
+            </div>
+        </section>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
